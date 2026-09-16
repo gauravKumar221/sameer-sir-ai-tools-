@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
         _id: '507f1f77bcf86cd799439011',
         name: 'AutoGreen Admin',
         email: normalizedEmail,
-        role: 'admin',
+        role: 'admin' as const,
         points: 500,
       };
       await setAuthCookie({
@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
         _id: '507f1f77bcf86cd799439012',
         name: 'Demo Student / Operator',
         email: normalizedEmail,
-        role: 'user',
+        role: 'user' as const,
         points: 250,
       };
       await setAuthCookie({
