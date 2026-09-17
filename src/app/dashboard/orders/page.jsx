@@ -71,7 +71,6 @@ export default function OrderHistoryPage() {
                     <th className="py-3.5 px-4 font-semibold">Course Guide</th>
                     <th className="py-3.5 px-4 font-semibold">Date</th>
                     <th className="py-3.5 px-4 font-semibold">Amount Paid</th>
-                    <th className="py-3.5 px-4 font-semibold">Points Earned</th>
                     <th className="py-3.5 px-4 font-semibold">Status</th>
                     <th className="py-3.5 px-4 font-semibold text-right">Invoice</th>
                   </tr>
@@ -90,9 +89,6 @@ export default function OrderHistoryPage() {
                 })}
                       </td>
                       <td className="py-4 px-4 font-bold text-white">₹{ord.amount}</td>
-                      <td className="py-4 px-4 text-amber-300 font-semibold">
-                        {ord.pointsEarned > 0 ? `+${ord.pointsEarned} pts` : '-'}
-                      </td>
                       <td className="py-4 px-4">
                         <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold ${ord.status === 'success'
                     ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'

@@ -4,7 +4,7 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import confetti from 'canvas-confetti';
 import { useAuth } from '@/context/AuthContext';
-import { BookOpen, ShieldCheck, Tag, Coins, CreditCard, CheckCircle2, ArrowRight, Sparkles, Lock, ArrowLeft, Loader2, AlertCircle } from 'lucide-react';
+import { BookOpen, ShieldCheck, Tag, CreditCard, CheckCircle2, ArrowRight, Sparkles, Lock, ArrowLeft, Loader2, AlertCircle } from 'lucide-react';
 export default function CheckoutPage() {
     const params = useParams();
     const guideId = params?.id;
@@ -17,8 +17,6 @@ export default function CheckoutPage() {
     const [appliedCoupon, setAppliedCoupon] = useState(null);
     const [couponError, setCouponError] = useState(null);
     const [couponLoading, setCouponLoading] = useState(false);
-    const [redeemPoints, setRedeemPoints] = useState(0);
-    const [usePoints, setUsePoints] = useState(false);
     const [selectedGateway, setSelectedGateway] = useState('test');
     const [isProcessing, setIsProcessing] = useState(false);
     const [paymentSuccess, setPaymentSuccess] = useState(null);
@@ -88,13 +86,7 @@ export default function CheckoutPage() {
     // Calculations
     const basePrice = guide?.price || 0;
     const couponDiscount = appliedCoupon ? appliedCoupon.calculatedDiscount : 0;
-    const priceAfterCoupon = Math.max(0, basePrice - couponDiscount);
-    // Points conversion (1 point = ₹0.50 discount)
-    const maxRedeemablePoints = user ? Math.min(user.points || 0, Math.ceil(priceAfterCoupon / 0.5)) : 0;
-    const activeRedeemedPoints = usePoints ? maxRedeemablePoints : 0;
-    const pointsDiscount = Math.min(priceAfterCoupon, activeRedeemedPoints * 0.5);
-    const finalAmount = Math.max(0, Math.round(priceAfterCoupon - pointsDiscount));
-    const pointsToEarn = Math.round(finalAmount * 0.1);
+    const finalAmount = Math.max(0, Math.round(basePrice - couponDiscount));
     // Execute Checkout Payment
     const handleCompletePayment = async () => {
         if (!user) {
@@ -111,7 +103,7 @@ export default function CheckoutPage() {
                 body: JSON.stringify({
                     guideId: guide.id || guide._id,
                     couponCode: appliedCoupon?.code || '',
-                    redeemPoints: activeRedeemedPoints,
+                    redeemPoints: 0,
                     paymentGateway: selectedGateway,
                 }),
             });
@@ -197,12 +189,6 @@ export default function CheckoutPage() {
               </p>
             </div>
 
-            {/* Earned Points Alert */}
-            <div className="rounded-xl bg-amber-500/10 border border-amber-500/20 p-3 text-xs text-amber-300 flex items-center justify-center gap-2">
-              <Coins className="h-4 w-4 text-amber-400"/>
-              <span>You earned <strong className="text-white">+{pointsToEarn} Loyalty Points</strong> from this purchase!</span>
-            </div>
-
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <Link href={`/dashboard/reader/${guide.id || guide._id}`} className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white text-xs font-bold shadow-lg shadow-brand-500/30 transition-transform hover:scale-105">
                 <BookOpen className="h-4 w-4"/>
@@ -266,35 +252,6 @@ export default function CheckoutPage() {
                   Tip: Try demo coupons <code className="text-brand-300 font-mono">WELCOME50</code> for ₹50 off or <code className="text-brand-300 font-mono">PRO20</code> for 20% off.
                 </p>
               </div>
-
-              {/* Loyalty Reward Points Redemption */}
-              {user && (<div className="rounded-2xl bg-slate-900/80 border border-slate-800 p-5 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <Coins className="h-4 w-4 text-amber-400"/>
-                      <h4 className="text-xs font-bold text-slate-200 uppercase tracking-wider">
-                        Redeem Loyalty Points
-                      </h4>
-                    </div>
-                    <span className="text-xs font-semibold text-amber-300">
-                      Balance: {user.points || 0} Points (Value: ₹{((user.points || 0) * 0.5).toFixed(0)})
-                    </span>
-                  </div>
-
-                  {user.points > 0 ? (<label className="flex items-center gap-3 p-3 rounded-xl bg-slate-950 border border-slate-800/80 cursor-pointer hover:border-slate-700 transition-colors">
-                      <input type="checkbox" checked={usePoints} onChange={(e) => setUsePoints(e.target.checked)} className="h-4 w-4 rounded bg-slate-900 border-slate-700 text-brand-600 focus:ring-brand-500"/>
-                      <div className="text-xs">
-                        <span className="text-slate-200 font-medium block">
-                          Redeem {maxRedeemablePoints} points to save ₹{pointsDiscount.toFixed(0)}
-                        </span>
-                        <span className="text-slate-500 text-[11px]">
-                          1 Point = ₹0.50 instant checkout discount
-                        </span>
-                      </div>
-                    </label>) : (<p className="text-xs text-slate-500">
-                      You currently have 0 points. You will earn <strong className="text-amber-300">+{pointsToEarn} points</strong> on this purchase!
-                    </p>)}
-                </div>)}
 
               {/* Payment Gateway Selector */}
               <div className="rounded-2xl bg-slate-900/80 border border-slate-800 p-5 space-y-3">
@@ -360,11 +317,6 @@ export default function CheckoutPage() {
                       <span>-₹{couponDiscount}</span>
                     </div>)}
 
-                  {pointsDiscount > 0 && (<div className="flex justify-between text-amber-400 font-semibold">
-                      <span>Points Redeemed ({activeRedeemedPoints} pts)</span>
-                      <span>-₹{pointsDiscount}</span>
-                    </div>)}
-
                   <div className="flex justify-between text-slate-400 text-[11px]">
                     <span>DRM Viewer License</span>
                     <span className="text-emerald-400 font-medium">Included</span>
@@ -378,11 +330,6 @@ export default function CheckoutPage() {
                     <span className="text-2xl font-extrabold text-white">₹{finalAmount}</span>
                     <span className="block text-[10px] text-slate-400">Taxes inclusive</span>
                   </div>
-                </div>
-
-                {/* Points Earned Notice */}
-                <div className="rounded-xl bg-amber-500/10 border border-amber-500/20 p-2.5 text-center text-xs text-amber-300">
-                  You will earn <strong className="text-white">+{pointsToEarn} Points</strong> on this order!
                 </div>
 
                 {checkoutError && (<div className="rounded-xl bg-rose-950/60 border border-rose-800/60 p-3 text-xs text-rose-200">

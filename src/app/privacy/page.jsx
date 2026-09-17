@@ -49,38 +49,38 @@ export default function PrivacyPolicyPage() {
             ]
         }
     ];
-    return (<div className="relative min-h-screen py-16 px-4 sm:px-6 lg:px-8 bg-[#020617] text-slate-100">
+    return (<div className="relative min-h-screen py-16 px-4 sm:px-6 lg:px-8 bg-white text-slate-900">
       
       {/* Ambient glow */}
-      <div className="ambient-glow top-20 left-1/4 h-80 w-80 bg-emerald-500/10"/>
+      <div className="ambient-glow top-20 left-1/4 h-80 w-80 bg-emerald-100/30"/>
 
       <div className="relative mx-auto max-w-4xl space-y-12">
         
         {/* Header */}
-        <div className="space-y-4 border-b border-emerald-950/80 pb-8">
+        <div className="space-y-4 border-b border-slate-200 pb-8">
           <div className="flex items-center gap-2">
-            <Link href="/" className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-emerald-400 transition-colors">
+            <Link href="/" className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-emerald-700 transition-colors">
               <ArrowLeft className="h-4 w-4"/>
               <span>Back to AutoGreen AI</span>
             </Link>
           </div>
 
           <div className="flex items-center gap-3 pt-2">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-700">
               <ShieldCheck className="h-6 w-6"/>
             </div>
             <div>
-              <h1 className="text-3xl font-extrabold text-white">Privacy Policy</h1>
-              <p className="text-xs text-slate-400 mt-0.5">Last updated: September 2026 • AutoGreen AI Platform</p>
+              <h1 className="text-3xl font-extrabold text-[#111827]">Privacy Policy</h1>
+              <p className="text-xs text-slate-500 mt-0.5">Last updated: September 2026 • AutoGreen AI Platform</p>
             </div>
           </div>
         </div>
 
         {/* Highlight Notice */}
-        <div className="rounded-2xl bg-[#061412] border border-emerald-900/50 p-5 flex items-start gap-4">
-          <Lock className="h-6 w-6 text-emerald-400 shrink-0 mt-0.5"/>
-          <div className="text-xs text-slate-300 leading-relaxed space-y-1">
-            <span className="font-bold text-white block">Our Privacy Commitment</span>
+        <div className="rounded-2xl bg-emerald-50 border border-emerald-200 p-5 flex items-start gap-4">
+          <Lock className="h-6 w-6 text-emerald-700 shrink-0 mt-0.5"/>
+          <div className="text-xs text-slate-700 leading-relaxed space-y-1">
+            <span className="font-bold text-slate-900 block">Our Privacy Commitment</span>
             We respect your privacy and protect your intellectual property and reading data. We do not sell user data or share private prompts.
           </div>
         </div>
@@ -89,15 +89,15 @@ export default function PrivacyPolicyPage() {
         <div className="space-y-8">
           {policies.map((sec, idx) => {
             const Icon = sec.icon;
-            return (<div key={idx} className="rounded-2xl bg-[#061412]/60 border border-emerald-950 p-6 sm:p-8 space-y-4">
+            return (<div key={idx} className="rounded-2xl bg-slate-50/70 border border-slate-200 p-6 sm:p-8 space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                  <div className="h-8 w-8 rounded-lg bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-700">
                     <Icon className="h-4 w-4"/>
                   </div>
-                  <h2 className="text-lg font-bold text-white">{sec.title}</h2>
+                  <h2 className="text-lg font-bold text-[#111827]">{sec.title}</h2>
                 </div>
 
-                <ul className="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed list-disc list-inside">
+                <ul className="space-y-2 text-xs sm:text-sm text-slate-600 leading-relaxed list-disc list-inside">
                   {sec.items.map((item, itemIdx) => (<li key={itemIdx} className="leading-relaxed">
                       {item}
                     </li>))}
@@ -107,15 +107,15 @@ export default function PrivacyPolicyPage() {
         </div>
 
         {/* Contact info box */}
-        <div className="rounded-2xl bg-[#061412] border border-emerald-950 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="rounded-2xl bg-white border border-slate-200 p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
           <div className="flex items-center gap-3">
-            <Mail className="h-5 w-5 text-emerald-400"/>
+            <Mail className="h-5 w-5 text-emerald-600"/>
             <div>
-              <h4 className="text-xs font-bold text-white">Privacy Concerns or Data Requests?</h4>
-              <p className="text-xs text-slate-400">Email our privacy desk at privacy@autogreen.ai</p>
+              <h4 className="text-xs font-bold text-slate-900">Privacy Concerns or Data Requests?</h4>
+              <p className="text-xs text-slate-500">Email our privacy desk at privacy@autogreen.ai</p>
             </div>
           </div>
-          <Link href="/about" className="px-4 py-2 rounded-xl bg-slate-900 border border-emerald-950 hover:bg-slate-800 text-xs font-bold text-white transition-all">
+          <Link href="/about" className="px-4 py-2 rounded-xl bg-slate-100 border border-slate-300 hover:bg-slate-200 text-xs font-bold text-slate-800 transition-all">
             About AutoGreen AI
           </Link>
         </div>

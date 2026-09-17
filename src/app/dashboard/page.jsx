@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
-import { BookOpen, ShoppingBag, Sparkles, ArrowRight, ShieldCheck, Award, Search } from 'lucide-react';
+import { BookOpen, ShoppingBag, Sparkles, ArrowRight, ShieldCheck, Search } from 'lucide-react';
 export default function DashboardLibraryPage() {
     const { user, loading } = useAuth();
     const router = useRouter();
@@ -74,10 +74,6 @@ export default function DashboardLibraryPage() {
           </div>
 
           <div className="flex items-center gap-3">
-            <Link href="/dashboard/rewards" className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-amber-500/10 border border-amber-500/25 text-amber-300 text-xs font-semibold hover:bg-amber-500/20 transition-all">
-              <Award className="h-4 w-4 text-amber-400"/>
-              <span>{user?.points || 0} Points Balance</span>
-            </Link>
             <Link href="/" className="flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold shadow-md shadow-brand-500/20 transition-all">
               <Sparkles className="h-4 w-4"/>
               <span>Explore More Guides</span>

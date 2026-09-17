@@ -1,23 +1,28 @@
-import { Inter } from 'next/font/google';
 import './globals.css';
 import { AuthProvider } from '@/context/AuthContext';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-const inter = Inter({
-    subsets: ['latin'],
-    variable: '--font-inter',
-    display: 'swap',
-});
+
 export const metadata = {
-    title: 'AutoGreen AI — AI is the new green.',
-    description: 'A global AI ecosystem helping people and businesses discover, use, automate and build with artificial intelligence. Different Businesses. One Green.',
-    keywords: ['AutoGreen AI', 'AI Kits', 'AI Automations', 'AI Agents', 'AI Marketer Kit', 'AI Tools Ecosystem'],
-    authors: [{ name: 'AutoGreen AI' }],
-    robots: { index: true, follow: true },
+  title: 'AutoGreen AI — AI is the new green.',
+  description: 'A global AI ecosystem helping people and businesses discover, use, automate and build with artificial intelligence. Different Businesses. One Green.',
+  keywords: ['AutoGreen AI', 'AI Kits', 'AI Automations', 'AI Agents', 'AI Marketer Kit', 'AI Tools Ecosystem'],
+  authors: [{ name: 'AutoGreen AI' }],
+  robots: { index: true, follow: true },
 };
-export default function RootLayout({ children, }) {
-    return (<html lang="en" className={`dark ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#020617] text-slate-100 antialiased selection:bg-emerald-500 selection:text-black">
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="min-h-screen flex flex-col bg-[#FFFFFF] text-slate-900 antialiased selection:bg-emerald-500 selection:text-white">
         <AuthProvider>
           <Navbar />
           <main className="flex-1 w-full">
