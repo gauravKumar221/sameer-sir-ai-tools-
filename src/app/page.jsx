@@ -378,7 +378,7 @@ export default function HomePage() {
               </h1>
 
               {/* Subheading Description */}
-              <p className="text-[#555B6E] text-sm sm:text-base lg:text-lg max-w-lg leading-relaxed font-normal">
+              <p className="text-black text-sm sm:text-base lg:text-lg max-w-lg leading-relaxed font-normal">
                 Ensuring the best return on investment for your bespoke SEO campaign requirement.
               </p>
 
@@ -406,7 +406,7 @@ export default function HomePage() {
               </div>
 
               {/* Contact Info Badge */}
-              <div className="pt-2 flex flex-wrap items-center gap-6 text-xs text-slate-600">
+              <div className="pt-2 flex flex-wrap items-center gap-6 text-xs text-black">
                 <div className="flex items-center gap-3">
                   <div className="p-2.5 rounded-xl bg-[#FFF1F2] border border-[#FECDD3] text-[#E94D4D]">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -415,7 +415,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <span className="font-extrabold text-[#1B1D3A] text-base block tracking-tight">800-123-4567</span>
-                    <span className="text-[#8F95A5] text-[11px] font-semibold uppercase tracking-wider">INFO@COMPANY.COM</span>
+                    <span className="text-black text-[11px] font-semibold uppercase tracking-wider">INFO@COMPANY.COM</span>
                   </div>
                 </div>
 
@@ -583,7 +583,7 @@ export default function HomePage() {
               </h2>
 
               {/* Description */}
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl font-normal">
+              <p className="text-black text-sm sm:text-base leading-relaxed max-w-xl font-normal">
                 We are passionate about our work. Our designers stay ahead of the curve to provide engaging and user-friendly website designs to make your business stand out. Our developers are committed to maintaining the highest web standards so that your site will withstand the test of time. We care about your business, which is why we work with you.
               </p>
 
@@ -618,7 +618,7 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-5xl font-extrabold text-[#111827] tracking-tight">
               Start with the <span className="text-emerald-600">AI Marketer Kit</span>
             </h2>
-            <p className="mt-4 text-slate-600 text-base">
+            <p className="mt-4 text-black text-base">
               A role-specific digital toolkit that turns marketers into AI operators. It combines Claude Skills,
               workflows, n8n automations, and AI employees across three progressive levels.
             </p>
@@ -638,7 +638,7 @@ export default function HomePage() {
                     </span>)}
 
                   <h3 className="text-2xl font-bold text-[#111827] mt-1">{tier.name}</h3>
-                  <p className="text-xs text-slate-600 mt-2 min-h-[34px]">{tier.description}</p>
+                  <p className="text-xs text-black mt-2 min-h-[34px]">{tier.description}</p>
 
                   <div className="mt-6 flex items-baseline gap-2">
                     <span className="text-4xl font-extrabold text-[#111827]">{tier.price}</span>
@@ -647,8 +647,8 @@ export default function HomePage() {
                   </div>
 
                   <div className="mt-8 space-y-3">
-                    <p className="text-xs font-bold uppercase tracking-wider text-slate-700">What is included:</p>
-                    {tier.features.map((feat, idx) => (<div key={idx} className="flex items-start gap-2.5 text-xs text-slate-600">
+                    <p className="text-xs font-bold uppercase tracking-wider text-black">What is included:</p>
+                    {tier.features.map((feat, idx) => (<div key={idx} className="flex items-start gap-2.5 text-xs text-black">
                         <CheckCircle className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5"/>
                         <span>{feat}</span>
                       </div>))}
@@ -684,7 +684,7 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-5xl font-extrabold text-[#111827] tracking-tight">
               Build <span className="text-emerald-600">AI employees.</span>
             </h2>
-            <p className="mt-4 text-slate-600 text-base">
+            <p className="mt-4 text-black text-base">
               Specialised AI agents that research, sell, support and report alongside your team.
               Explore our production-ready agent blueprints.
             </p>
@@ -705,7 +705,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <p className="text-sm font-bold text-slate-900">{agent.name}</p>
-                      <p className="text-xs text-slate-500">{agent.role}</p>
+                      <p className="text-xs text-black">{agent.role}</p>
                     </div>
                   </div>
                   <span className="text-xs font-mono px-2 py-0.5 rounded bg-emerald-100/80 text-emerald-800 border border-emerald-200">
@@ -794,22 +794,22 @@ export default function HomePage() {
                 <span className="text-emerald-600">Connect apps, data and AI.</span>
               </h2>
 
-              <p className="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+              <p className="mt-4 text-black text-sm sm:text-base leading-relaxed">
                 Connect your business tools, databases, and AI models so decisions and actions occur without friction.
                 From automated client onboarding to multi-step research reports, AutoGreen gives you battle-tested n8n
                 and webhook pipelines.
               </p>
 
               <div className="mt-8 space-y-3">
-                <div className="flex items-center gap-3 text-sm text-slate-700">
+                <div className="flex items-center gap-3 text-sm text-black">
                   <div className="h-6 w-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">1</div>
                   <span>Trigger from any webhook, form, CRM or database event</span>
                 </div>
-                <div className="flex items-center gap-3 text-sm text-slate-700">
+                <div className="flex items-center gap-3 text-sm text-black">
                   <div className="h-6 w-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">2</div>
                   <span>Process context through Claude 3.5 Sonnet / OpenAI with strict guardrails</span>
                 </div>
-                <div className="flex items-center gap-3 text-sm text-slate-700">
+                <div className="flex items-center gap-3 text-sm text-black">
                   <div className="h-6 w-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">3</div>
                   <span>Dispatch formatted outputs to Slack, Gmail, Google Sheets or your custom API</span>
                 </div>
@@ -835,21 +835,21 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <p className="text-xs text-slate-600 leading-relaxed mb-6">
+              <p className="text-xs text-black leading-relaxed mb-6">
                 Deliver human-like, real-time voice interactions across inbound calls, outbound qualification, and customer support.
                 AutoGreen Voice connects telephony with LLMs in under 450ms.
               </p>
 
               <div className="space-y-2.5 p-4 rounded-2xl bg-slate-50 border border-slate-200 mb-6">
-                <div className="flex items-center justify-between text-xs text-slate-700">
+                <div className="flex items-center justify-between text-xs text-black">
                   <span>Voice Latency</span>
                   <span className="font-mono text-emerald-700 font-bold">&lt; 450ms</span>
                 </div>
-                <div className="flex items-center justify-between text-xs text-slate-700">
+                <div className="flex items-center justify-between text-xs text-black">
                   <span>Supported Accents & Languages</span>
                   <span className="font-mono text-emerald-700 font-bold">38+</span>
                 </div>
-                <div className="flex items-center justify-between text-xs text-slate-700">
+                <div className="flex items-center justify-between text-xs text-black">
                   <span>Calendar & CRM Integration</span>
                   <span className="font-mono text-emerald-700 font-bold">Google, Cal.com, HubSpot</span>
                 </div>
@@ -882,7 +882,7 @@ export default function HomePage() {
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#111827] tracking-tight">
                 Curated AI Technical Guides
               </h2>
-              <p className="mt-2 text-slate-600 text-sm max-w-xl">
+              <p className="mt-2 text-black text-sm max-w-xl">
                 Read in-depth manuals, developer architecture blueprints, and business playbooks
                 directly in our cloud DRM reader.
               </p>
@@ -925,7 +925,7 @@ export default function HomePage() {
                       <h3 className="font-bold text-slate-900 text-base group-hover:text-emerald-700 transition-colors line-clamp-2">
                         {guide.title}
                       </h3>
-                      <p className="mt-2 text-xs text-slate-500 line-clamp-2">
+                      <p className="mt-2 text-xs text-black line-clamp-2">
                         {guide.shortDescription}
                       </p>
                     </div>
@@ -945,7 +945,7 @@ export default function HomePage() {
             </div>) : (<div className="text-center py-16 rounded-2xl border border-dashed border-slate-300 bg-slate-50">
               <BookOpen className="h-10 w-10 text-emerald-600 mx-auto mb-3"/>
               <p className="text-sm font-semibold text-slate-900">No guides matching your criteria</p>
-              <p className="text-xs text-slate-500 mt-1">Try resetting the category filter or search query</p>
+              <p className="text-xs text-black mt-1">Try resetting the category filter or search query</p>
               <button onClick={() => {
                 setSelectedCategory('All');
                 setSearchQuery('');
@@ -968,7 +968,7 @@ export default function HomePage() {
               We separate useful AI <br />
               <span className="text-emerald-600">from AI noise.</span>
             </h2>
-            <p className="mt-4 text-slate-600 text-base">
+            <p className="mt-4 text-black text-base">
               AI changes constantly. AutoGreen evolves with it. We engineer pragmatic systems that drive
               verifiable productivity rather than superficial hype.
             </p>
@@ -980,7 +980,7 @@ export default function HomePage() {
                 01
               </div>
               <h4 className="text-base font-bold text-slate-900 mb-2">Find the right AI tools</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
+              <p className="text-xs text-black leading-relaxed">
                 Filter through thousands of AI products to uncover the select few that generate immediate ROI for your role.
               </p>
             </div>
@@ -990,7 +990,7 @@ export default function HomePage() {
                 02
               </div>
               <h4 className="text-base font-bold text-slate-900 mb-2">Create AI employees</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
+              <p className="text-xs text-black leading-relaxed">
                 Package tasks into autonomous agents that conduct research, resolve support, and publish content without supervision.
               </p>
             </div>
@@ -1000,7 +1000,7 @@ export default function HomePage() {
                 03
               </div>
               <h4 className="text-base font-bold text-slate-900 mb-2">Automate workflows</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
+              <p className="text-xs text-black leading-relaxed">
                 Wire up APIs, webhooks, and n8n scripts so multi-step operational chains execute seamlessly around the clock.
               </p>
             </div>
@@ -1010,7 +1010,7 @@ export default function HomePage() {
                 04
               </div>
               <h4 className="text-base font-bold text-slate-900 mb-2">Become future-ready</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
+              <p className="text-xs text-black leading-relaxed">
                 Transition from manual operator to strategic orchestrator of intelligent systems across modern business.
               </p>
             </div>
@@ -1030,7 +1030,7 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#111827] tracking-tight">
               Frequently Asked Questions
             </h2>
-            <p className="mt-2 text-slate-600 text-sm">
+            <p className="mt-2 text-black text-sm">
               Everything you need to know about AutoGreen AI, the kits, automations, and DRM ecosystem.
             </p>
           </div>
@@ -1044,7 +1044,7 @@ export default function HomePage() {
                     <ChevronDown className={`h-4 w-4 text-emerald-600 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}/>
                   </button>
 
-                  {isOpen && (<div className="px-6 pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/80 bg-white pt-4">
+                  {isOpen && (<div className="px-6 pb-6 text-xs sm:text-sm text-black leading-relaxed border-t border-slate-200/80 bg-white pt-4">
                       {faq.a}
                     </div>)}
                 </div>);
@@ -1068,7 +1068,7 @@ export default function HomePage() {
             Practical AI, straight to your inbox.
           </h2>
 
-          <p className="mt-4 text-slate-600 text-sm sm:text-base max-w-xl mx-auto">
+          <p className="mt-4 text-black text-sm sm:text-base max-w-xl mx-auto">
             Different Businesses. One Green. Join 12,000+ engineers, marketers and founders building with AI.
           </p>
 
@@ -1087,7 +1087,7 @@ export default function HomePage() {
                   <Send className="h-3.5 w-3.5"/>
                 </button>
               </form>)}
-            <p className="text-[11px] text-slate-500 mt-3">No spam. Only high-signal workflows, agent blueprints, and tool teardowns.</p>
+            <p className="text-[11px] text-black mt-3">No spam. Only high-signal workflows, agent blueprints, and tool teardowns.</p>
           </div>
 
         </div>
@@ -1170,7 +1170,7 @@ export default function HomePage() {
                   <CheckCircle className="h-6 w-6" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900">Demo Request Received!</h3>
-                <p className="text-xs sm:text-sm text-slate-600 max-w-sm mx-auto">
+                <p className="text-xs sm:text-sm text-black max-w-sm mx-auto">
                   Thank you, <strong className="text-slate-900">{demoForm.name || 'there'}</strong>! A solutions specialist will connect with you at <span className="text-emerald-700 font-mono font-semibold">{demoForm.email}</span> within 24 hours.
                 </p>
                 <button
@@ -1188,7 +1188,7 @@ export default function HomePage() {
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#0082ff]">Get in touch</span>
                 <h3 className="text-2xl font-bold text-slate-900 mt-1">Request a Personalized Demo</h3>
-                <p className="text-xs text-slate-500 mt-1">
+                <p className="text-xs text-black mt-1">
                   Tell us a bit about your business goals and we will set up a guided walkthrough.
                 </p>
 

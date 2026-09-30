@@ -71,7 +71,7 @@ export default function PrivacyPolicyPage() {
             </div>
             <div>
               <h1 className="text-3xl font-extrabold text-[#111827]">Privacy Policy</h1>
-              <p className="text-xs text-slate-500 mt-0.5">Last updated: September 2026 • AutoGreen AI Platform</p>
+              <p className="text-xs text-black mt-0.5">Last updated: September 2026 • AutoGreen AI Platform</p>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
         {/* Highlight Notice */}
         <div className="rounded-2xl bg-emerald-50 border border-emerald-200 p-5 flex items-start gap-4">
           <Lock className="h-6 w-6 text-emerald-700 shrink-0 mt-0.5"/>
-          <div className="text-xs text-slate-700 leading-relaxed space-y-1">
+          <div className="text-xs text-black leading-relaxed space-y-1">
             <span className="font-bold text-slate-900 block">Our Privacy Commitment</span>
             We respect your privacy and protect your intellectual property and reading data. We do not sell user data or share private prompts.
           </div>
@@ -97,7 +97,7 @@ export default function PrivacyPolicyPage() {
                   <h2 className="text-lg font-bold text-[#111827]">{sec.title}</h2>
                 </div>
 
-                <ul className="space-y-2 text-xs sm:text-sm text-slate-600 leading-relaxed list-disc list-inside">
+                <ul className="space-y-2 text-xs sm:text-sm text-black leading-relaxed list-disc list-inside">
                   {sec.items.map((item, itemIdx) => (<li key={itemIdx} className="leading-relaxed">
                       {item}
                     </li>))}
@@ -112,7 +112,7 @@ export default function PrivacyPolicyPage() {
             <Mail className="h-5 w-5 text-emerald-600"/>
             <div>
               <h4 className="text-xs font-bold text-slate-900">Privacy Concerns or Data Requests?</h4>
-              <p className="text-xs text-slate-500">Email our privacy desk at privacy@autogreen.ai</p>
+              <p className="text-xs text-black">Email our privacy desk at privacy@autogreen.ai</p>
             </div>
           </div>
           <Link href="/about" className="px-4 py-2 rounded-xl bg-slate-100 border border-slate-300 hover:bg-slate-200 text-xs font-bold text-slate-800 transition-all">

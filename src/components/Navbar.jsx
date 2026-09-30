@@ -97,7 +97,7 @@ export default function Navbar() {
 
                 {userDropdownOpen && (<div onMouseLeave={() => setUserDropdownOpen(false)} className="absolute right-0 mt-2 w-56 rounded-xl bg-white border border-slate-200 shadow-2xl py-2 z-50 animate-in fade-in zoom-in-95 duration-100">
                     <div className="px-4 py-2 border-b border-slate-100">
-                      <p className="text-xs text-slate-500">Signed in as</p>
+                      <p className="text-xs text-black font-medium">Signed in as</p>
                       <p className="text-sm font-semibold text-slate-900 truncate">{user.email}</p>
                       <span className="inline-block mt-1 text-[10px] font-semibold uppercase px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">
                         {user.role}

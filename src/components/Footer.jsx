@@ -14,7 +14,7 @@ export default function Footer() {
     ) {
         return null;
     }
-    return (<footer className="border-t border-slate-200 bg-[#F8FAFC] text-slate-600 text-xs">
+    return (<footer className="border-t border-slate-200 bg-[#F8FAFC] text-black text-xs">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           
@@ -24,11 +24,11 @@ export default function Footer() {
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 shadow-xs">
                 <Sparkles className="h-5 w-5 text-emerald-600"/>
               </div>
-              <span className="font-bold text-lg leading-tight tracking-tight text-slate-900">
+              <span className="font-bold text-lg leading-tight tracking-tight text-black">
                 AutoGreen <span className="text-emerald-600 font-semibold">AI</span>
               </span>
             </Link>
-            <p className="text-slate-600 text-xs leading-relaxed max-w-sm">
+            <p className="text-black text-xs leading-relaxed max-w-sm">
               A global AI ecosystem helping people and businesses discover, use, automate and build with artificial intelligence.
               Different Businesses. One Green.
             </p>
@@ -40,35 +40,35 @@ export default function Footer() {
 
           {/* Ecosystem Navigation */}
           <div>
-            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-900 mb-3">Ecosystem</h3>
+            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-black mb-3">Ecosystem</h3>
             <ul className="space-y-2.5">
               <li>
-                <Link href="/#discover" className="hover:text-slate-900 text-slate-600 transition-colors">
+                <Link href="/#discover" className="hover:text-emerald-700 text-black transition-colors">
                   01 Discover
                 </Link>
               </li>
               <li>
-                <Link href="/#kits" className="hover:text-slate-900 text-slate-600 transition-colors">
+                <Link href="/#kits" className="hover:text-emerald-700 text-black transition-colors">
                   02 AI Kits
                 </Link>
               </li>
               <li>
-                <Link href="/#automate" className="hover:text-slate-900 text-slate-600 transition-colors">
+                <Link href="/#automate" className="hover:text-emerald-700 text-black transition-colors">
                   03 Automate
                 </Link>
               </li>
               <li>
-                <Link href="/#agents" className="hover:text-slate-900 text-slate-600 transition-colors">
+                <Link href="/#agents" className="hover:text-emerald-700 text-black transition-colors">
                   04 AI Agents
                 </Link>
               </li>
               <li>
-                <Link href="/#voice" className="hover:text-slate-900 text-slate-600 transition-colors">
+                <Link href="/#voice" className="hover:text-emerald-700 text-black transition-colors">
                   05 Voice AI
                 </Link>
               </li>
               <li>
-                <a href="mailto:contact@autogreen.ai" className="hover:text-slate-900 text-slate-600 transition-colors">
+                <a href="mailto:contact@autogreen.ai" className="hover:text-emerald-700 text-black transition-colors">
                   06 Studio
                 </a>
               </li>
@@ -77,30 +77,30 @@ export default function Footer() {
 
           {/* Company & Legal */}
           <div>
-            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-900 mb-3">Company & Trust</h3>
+            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-black mb-3">Company & Trust</h3>
             <ul className="space-y-2.5">
               <li>
-                <Link href="/about" className="hover:text-slate-900 text-slate-600 transition-colors">
+                <Link href="/about" className="hover:text-emerald-700 text-black transition-colors">
                   About AutoGreen AI
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="hover:text-slate-900 text-slate-600 transition-colors">
+                <Link href="/terms" className="hover:text-emerald-700 text-black transition-colors">
                   Terms & Conditions
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="hover:text-slate-900 text-slate-600 transition-colors">
+                <Link href="/privacy" className="hover:text-emerald-700 text-black transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/#resources" className="hover:text-slate-900 text-slate-600 transition-colors">
+                <Link href="/#resources" className="hover:text-emerald-700 text-black transition-colors">
                   AI Guides Catalog
                 </Link>
               </li>
               <li>
-                <Link href="/dashboard" className="hover:text-slate-900 text-slate-600 transition-colors">
+                <Link href="/dashboard" className="hover:text-emerald-700 text-black transition-colors">
                   My Library & DRM Reader
                 </Link>
               </li>
@@ -109,11 +109,11 @@ export default function Footer() {
 
           {/* Connect / Studio */}
           <div className="rounded-2xl bg-white border border-slate-200 p-5 space-y-3 shadow-sm">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900 flex items-center gap-1.5">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-black flex items-center gap-1.5">
               <Sparkles className="h-3.5 w-3.5 text-emerald-600"/>
               Build with AutoGreen
             </h3>
-            <p className="text-[11px] text-slate-600 leading-relaxed">
+            <p className="text-[11px] text-black leading-relaxed">
               Need custom AI strategy, agent implementation, or enterprise workflow deployment?
             </p>
             <a href="mailto:contact@autogreen.ai" className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 hover:text-emerald-700 transition-colors pt-1">
@@ -124,13 +124,13 @@ export default function Footer() {
 
         </div>
 
-        <div className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
+        <div className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-black text-[11px]">
           <p>© {new Date().getFullYear()} AutoGreen AI. Built for the modern world, wherever you work.</p>
           <div className="flex items-center gap-6">
-            <Link href="/about" className="hover:text-slate-900 transition-colors">About</Link>
-            <Link href="/terms" className="hover:text-slate-900 transition-colors">Terms</Link>
-            <Link href="/privacy" className="hover:text-slate-900 transition-colors">Privacy</Link>
-            <span className="flex items-center gap-1 text-slate-500">
+            <Link href="/about" className="hover:text-emerald-700 transition-colors">About</Link>
+            <Link href="/terms" className="hover:text-emerald-700 transition-colors">Terms</Link>
+            <Link href="/privacy" className="hover:text-emerald-700 transition-colors">Privacy</Link>
+            <span className="flex items-center gap-1 text-black">
               <Lock className="h-3 w-3 text-emerald-600"/> Secure DRM Platform
             </span>
           </div>

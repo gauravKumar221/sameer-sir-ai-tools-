@@ -120,7 +120,7 @@ export default function LoginPage() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                 Welcome Back!
               </h2>
-              <p className="text-xs sm:text-sm text-slate-500 mt-2 leading-relaxed">
+              <p className="text-xs sm:text-sm text-black mt-2 leading-relaxed">
                 Don&apos;t have an account?{' '}
                 <Link href="/signup" className="text-slate-900 font-bold underline hover:text-[#2434f6] transition-colors">
                   Create a new account now

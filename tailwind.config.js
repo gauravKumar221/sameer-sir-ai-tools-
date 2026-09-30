@@ -59,11 +59,12 @@ const config = {
         }
       },
 
-      // Custom font families: PT Sans for headings, Roboto for body & paragraphs
+      // Custom font families: Poppins for body, sans, headings & paragraphs
       fontFamily: {
-        heading: ["'PT Sans'", "sans-serif"],
-        sans: ["'Roboto'", "sans-serif"],
-        body: ["'Roboto'", "sans-serif"],
+        poppins: ["'Poppins'", "sans-serif"],
+        heading: ["'Poppins'", "'PT Sans'", "sans-serif"],
+        sans: ["'Poppins'", "sans-serif"],
+        body: ["'Poppins'", "sans-serif"],
       },
     },
   },

@@ -63,7 +63,7 @@ export default function AboutUsPage() {
             </span>
           </h1>
 
-          <p className="mx-auto max-w-2xl text-base text-slate-600 leading-relaxed">
+          <p className="mx-auto max-w-2xl text-base text-black leading-relaxed">
             Thousands of businesses. Thousands of professions. Thousands of ways to work.{' '}
             <strong className="text-slate-900">One intelligence connects them all.</strong> AutoGreen AI is a global AI ecosystem helping people and businesses discover, use, automate and build with artificial intelligence.
           </p>
@@ -75,7 +75,7 @@ export default function AboutUsPage() {
               <div className="text-3xl sm:text-4xl font-black text-emerald-700">
                 {stat.value}
               </div>
-              <div className="text-xs font-semibold text-slate-600 mt-2">{stat.label}</div>
+              <div className="text-xs font-semibold text-black mt-2">{stat.label}</div>
             </div>))}
         </div>
 
@@ -83,7 +83,7 @@ export default function AboutUsPage() {
         <div className="space-y-6">
           <div className="text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#111827]">The AutoGreen Standard</h2>
-            <p className="text-xs text-slate-500 mt-1">Engineered from the ground up for practical AI implementation</p>
+            <p className="text-xs text-black mt-1">Engineered from the ground up for practical AI implementation</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -94,7 +94,7 @@ export default function AboutUsPage() {
                     <Icon className="h-6 w-6"/>
                   </div>
                   <h3 className="text-lg font-bold text-slate-900">{pillar.title}</h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">{pillar.description}</p>
+                  <p className="text-xs text-black leading-relaxed">{pillar.description}</p>
                 </div>);
         })}
           </div>
@@ -112,12 +112,12 @@ export default function AboutUsPage() {
             </div>
           </div>
 
-          <p className="text-slate-600 text-sm leading-relaxed">
+          <p className="text-black text-sm leading-relaxed">
             Artificial intelligence is not just a collection of separate tools; it is the fundamental utility connecting modern enterprise, independent creators, and agile teams. AutoGreen makes that intelligence straightforward to discover, test, automate, and scale.
           </p>
 
           <div className="space-y-3 pt-2">
-            {values.map((val, idx) => (<div key={idx} className="flex items-start gap-3 text-xs text-slate-700">
+            {values.map((val, idx) => (<div key={idx} className="flex items-start gap-3 text-xs text-black">
                 <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5"/>
                 <span>{val}</span>
               </div>))}
@@ -127,7 +127,7 @@ export default function AboutUsPage() {
         {/* Bottom CTA */}
         <div className="text-center pt-8 border-t border-slate-200">
           <h3 className="text-2xl font-bold text-slate-900 mb-3">Ready to transform your work with AI?</h3>
-          <p className="text-xs text-slate-500 max-w-md mx-auto mb-6">
+          <p className="text-xs text-black max-w-md mx-auto mb-6">
             Join thousands of professionals already leveraging AutoGreen AI toolkits and automations.
           </p>
           <div className="flex justify-center gap-4">
